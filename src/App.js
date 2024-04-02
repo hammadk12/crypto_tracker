@@ -8,7 +8,7 @@ function App() {
     <div>
       <header>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          My app
         </p>
       </header>
       <Footer />
