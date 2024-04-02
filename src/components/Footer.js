@@ -32,7 +32,7 @@ const toggleComplete = (indexToToggle) => {
         value={input}
         onChange={(e) => setInput(e.target.value)}
       />
-      <button onClick={addTodo} disabled={input === ''}>Add Task</button>
+      <button onClick={addTodo} disabled={input === ''}>Add Todo</button>
       <ul>
         {todos.map((todo, index) => (
         <li key={index} style={{ textDecoration: todo.completed ? 'line-through': 'none' }}>
