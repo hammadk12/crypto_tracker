@@ -8,7 +8,7 @@ function App() {
     <div>
       <header>
         <p>
-          My Crypto Tracker 1
+          My Crypto Tracker 
         </p>
       </header>
       <Footer />
