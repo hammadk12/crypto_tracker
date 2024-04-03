@@ -9,7 +9,7 @@ function App() {
     <div>
       <Navbar />
       <header>
-        <h2 className='font-bold text-left my-20 pl-32 text-4xl md:text-5xl lg:text-6xl'>CTrack - Start Tracking Today</h2>
+        <h2 className='font-bold text-center my-20 text-4xl md:text-5xl lg:text-6xl p-10'>CTrack - Start Tracking Today</h2>
       </header>
       <Footer />
     </div>
