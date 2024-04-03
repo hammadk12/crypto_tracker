@@ -3,19 +3,28 @@ import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 
 const Navbar = () => {
     const [nav, setNav] = useState(false) // State for mobile menu
-    const [isVisible, setIsVisible] = useState(true);
-    const [iconColor, setIconColor] = useState('white'); // State for icon color
+    const MOBILE_BREAKPOINT = 768; // mobile breakpoint
     
     const handleNav = () => {
         setNav(!nav)
     };
 
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth >= MOBILE_BREAKPOINT) {
+                setNav(false); // Close mobile menu when over breakpoint
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+        
+        // Clean up
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
   return (
-    <div style={{ transition: 'opacity 0.3s ease-in-out' }} 
-         className={`fixed left-0 top-0 w-full z-20 ${isVisible ? '' : 'opacity-0'}`}
-    >
-        <div className='flex justify-between items-center pt-10 px-14'>
+    <div>
+        <div className='flex justify-between items-center pt-10 pb-32 px-16'>
             <h1 className='font-bold text-xl'>CTrack</h1>
             <ul className='gap-8 text-xl sm:text-lg hidden sm:flex'>
                 <li className='hover:text-blue-400 cursor-pointer'>Search Bar</li>
@@ -24,7 +33,7 @@ const Navbar = () => {
             </ul>
 
         {/* Mobile Button */}
-        <div onClick={handleNav} className={`${iconColor} block sm:hidden z-10 cursor-pointer`}>
+        <div onClick={handleNav} className='block sm:hidden z-10 cursor-pointer'>
           {nav ? <AiOutlineClose size={20} style={{color: 'white'}}/> : <AiOutlineMenu size={20} />}
         </div>
         {/* Mobile Menu */}
