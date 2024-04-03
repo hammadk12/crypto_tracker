@@ -4,10 +4,21 @@ import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 const Navbar = () => {
     const [nav, setNav] = useState(false) // State for mobile menu
     const MOBILE_BREAKPOINT = 768; // mobile breakpoint
+    const [search, setSearch] = useState(''); // state for search input
     
     const handleNav = () => {
         setNav(!nav)
     };
+
+    const handleSubmit = (e) => {
+        e.preventDefault(); // prevent page refresh
+
+        console.log("Search query:", search);
+    }
+
+    const handleInput = (e) => {
+        setSearch(e.target.value)
+    }
 
     useEffect(() => {
         const handleResize = () => {
@@ -25,9 +36,18 @@ const Navbar = () => {
   return (
     <div>
         <div className='flex justify-between items-center pt-10 pb-32 px-16'>
-            <h1 className='font-bold text-xl'>CTrack</h1>
+            <h1 className='font-bold text-xl cursor-pointer'>CTrack</h1>
             <ul className='gap-8 text-xl sm:text-lg hidden sm:flex'>
-                <li className='hover:text-blue-400 cursor-pointer'>Search Bar</li>
+                <form onSubmit={handleSubmit}>
+                    <input
+                        type='text'
+                        value={search}
+                        placeholder='Search'
+                        onChange={handleInput} 
+                        className='text-black focus:outline-none rounded-xl pl-3 placeholder-black'
+                        style={{ backgroundColor: '#FAF0E6'}}
+                    />
+                </form>
                 <li className='hover:text-blue-400 cursor-pointer'>View</li>
                 <li className='hover:text-blue-400 cursor-pointer'>Contact</li>
             </ul>
