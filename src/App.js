@@ -2,10 +2,12 @@
 // Main layout
 import './App.css';
 import Footer from '../src/components/Footer'
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <div>
+      <Navbar />
       <header>
         <p>
           My Crypto Tracker 
