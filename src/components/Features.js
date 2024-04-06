@@ -2,7 +2,7 @@ import React from 'react'
 
 const Features = () => {
   return (
-    <div className="py-12">
+    <div className="py-12 sm:px-2 md:px-12 lg:px-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
            <div className='text-center'>
             <h2 className="mt-2 text-center text-3xl md:text-4xl lg:text-5xl leading-8 font-extrabold tracking-tight px-4">Efficiently track your cryptocurrency investments with our application.</h2>

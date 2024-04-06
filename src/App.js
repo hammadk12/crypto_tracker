@@ -5,6 +5,7 @@ import Footer from '../src/components/Footer'
 import Navbar from './components/Navbar';
 import Features from './components/Features';
 import Faq from './components/Faq';
+import Testimonial from './components/Testimonial';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <button style={{ borderColor: '#FAF0E6'}} className='border px-6 py-3'>Explore</button>
       </header>
       <Features />
+      <Testimonial />
       <Faq />
       <Footer />
     </div>
