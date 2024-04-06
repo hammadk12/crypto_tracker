@@ -45,7 +45,7 @@ const Faq = () => {
       <div className="md:flex md:items-start md:justify-between">
         {/* Left Column for Header and CTA */}
         <div className="mb-10 md:mb-0 md:w-1/2">
-          <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Frequently Asked Questions</h2>
           <p className="text-md mb-6">
             Find answers to common questions about our cryptocurrency tracking application.
           </p>
@@ -57,13 +57,13 @@ const Faq = () => {
         <div className="md:w-1/2">
           {faqs.map((faq, index) => (
             <div key={index} className="mb-6">
-              <dt className="flex justify-between items-center p-4 bg-white shadow cursor-pointer" onClick={() => toggleFAQ(index)}>
+              <dt className="flex justify-between items-center p-4 bg-[#FAF0E6] shadow cursor-pointer" onClick={() => toggleFAQ(index)}>
                 <h3 className="text-lg font-medium text-gray-900">{faq.question}</h3>
-                <div className="p-2 rounded-full bg-indigo-600 text-gray-900">
+                <div className="p-2 rounded-full bg-indigo-600 text-black">
                   {openFAQ === index ? <AiOutlineMinus /> : <AiOutlinePlus />}
                 </div>
               </dt>
-              <dd className={`${openFAQ === index ? 'block' : 'hidden'} p-4 bg-gray-100`}>
+              <dd className={`${openFAQ === index ? 'block' : 'hidden'} p-4 bg-gray-100 text-black`}>
                 {faq.answer}
               </dd>
             </div>
