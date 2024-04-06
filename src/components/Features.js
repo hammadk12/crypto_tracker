@@ -2,45 +2,44 @@ import React from 'react'
 
 const Features = () => {
   return (
-    <div className="bg-gray-100 py-12">
+    <div className="py-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-            <h2 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">Efficiently track your cryptocurrency investments with our application</h2>
-            <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+           <div className='text-center'>
+            <h2 className="mt-2 text-center text-3xl md:text-4xl lg:text-5xl leading-8 font-extrabold tracking-tight px-4">Efficiently track your cryptocurrency investments with our application</h2>
+            <p className="hidden md:block lg:block mt-10 text-center max-w-2xl text-xl lg:mx-auto px-8">
                 Our application provides users with the ability to easily search and filter their cryptocurrency data, allowing for efficient tracking of their investments.
             </p>
         </div>
-
-    <div className="mt-10">
-      <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-16 md:gap-y-10">
-        <div className="relative">
+    <div className="mt-14 lg:mt-20 md:mt-18 p-8 space-y-10 lg:space-y-0 lg:space-x-0 lg:p-0 mb-20 text-left">
+      <dl className="space-y-10 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-16 lg:gap-y-10">
+        <div className="bg-[#FAF0E6] p-6 rounded-xl shadow-md lg:bg-transparent lg:p-0 lg:rounded-none lg:shadow-none">
           <dt>
-            <p className="text-lg leading-6 font-medium text-gray-900">Stay informed with real-time cryptocurrency data</p>
+            <p className="text-xl lg:text-2xl mb-6 leading-6 font-medium text-black lg:text-[#FAF0E6]">Stay informed with real-time cryptocurrency data.</p>
           </dt>
-          <dd className="mt-2 text-base text-gray-500">
-            Our application provides users with real-time cryptocurrency data, ensuring they have the most up-to-date information to make informed investment decisions.
+          <dd className="mt-2 text-base text-black lg:text-[#FAF0E6]">
+          Our mobile app allows users to track their cryptocurrency investments anytime, anywhere, providing convenience and flexibility.
           </dd>
           <button className="mt-4 bg-indigo-600 text-white py-2 px-4 rounded hover:bg-indigo-700">Learn More</button>
         </div>
 
-        <div className="relative">
+        <div className="bg-[#FAF0E6] p-6 rounded-xl shadow-md lg:bg-transparent lg:p-0 lg:rounded-none lg:shadow-none">
           <dt>
-            <p className="text-lg leading-6 font-medium text-gray-900">Track your investments on the go with our mobile app</p>
+            <p className="text-xl lg:text-2xl mb-6 leading-6 font-medium text-black lg:text-[#FAF0E6]">Track your investments on the go with our mobile app.</p>
           </dt>
-          <dd className="mt-2 text-base text-gray-500">
+          <dd className="mt-2 text-base text-black lg:text-[#FAF0E6]">
             Our mobile app allows users to track their cryptocurrency investments anytime, anywhere, providing convenience and flexibility.
           </dd>
-          <button className="mt-4 bg-indigo-600 text-white py-2 px-4 rounded hover:bg-indigo-700">Download</button>
+          <button className="mt-4 bg-indigo-600 text-white py-2 px-4 rounded hover:bg-indigo-700">Search</button>
         </div>
 
-        <div className="relative">
+        <div className="bg-[#FAF0E6] p-6 rounded-xl shadow-md lg:bg-transparent lg:p-0 lg:rounded-none lg:shadow-none">
           <dt>
-            <p className="text-lg leading-6 font-medium text-gray-900">Securely manage your portfolio with our advanced features</p>
+            <p className="text-xl lg:text-2xl mb-6 leading-6 font-medium text-black lg:text-[#FAF0E6]">Securely manage your portfolio.</p>
           </dt>
-          <dd className="mt-2 text-base text-gray-500">
+          <dd className="mt-2 text-base text-black lg:text-[#FAF0E6]">
             Our application offers advanced features for portfolio management, ensuring the security and organization of your cryptocurrency investments.
           </dd>
-          <button className="mt-4 bg-indigo-600 text-white py-2 px-4 rounded hover:bg-indigo-700">Sign Up</button>
+          <button className="mt-4 bg-indigo-600 text-white py-2 px-4 rounded hover:bg-indigo-700">Contact</button>
         </div>
       </dl>
     </div>
