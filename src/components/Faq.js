@@ -58,12 +58,12 @@ const Faq = () => {
           {faqs.map((faq, index) => (
             <div key={index} className="mb-6">
               <dt className="flex justify-between items-center p-4 bg-[#FAF0E6] shadow cursor-pointer" onClick={() => toggleFAQ(index)}>
-                <h3 className="text-lg font-medium text-gray-900">{faq.question}</h3>
+                <h3 className="text-lg font-bold text-gray-900">{faq.question}</h3>
                 <div className="p-2 rounded-full bg-indigo-600 text-black">
                   {openFAQ === index ? <AiOutlineMinus /> : <AiOutlinePlus />}
                 </div>
               </dt>
-              <dd className={`${openFAQ === index ? 'block' : 'hidden'} p-4 bg-gray-100 text-black`}>
+              <dd className={`${openFAQ === index ? 'block' : 'hidden'} p-4 bg-[#FAF0E6] text-black font-medium`}>
                 {faq.answer}
               </dd>
             </div>

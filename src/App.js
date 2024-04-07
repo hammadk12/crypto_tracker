@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import Features from './components/Features';
 import Faq from './components/Faq';
 import Testimonial from './components/Testimonial';
+import Recognition from './components/Recognition';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       </header>
       <Features />
       <Testimonial />
+      <Recognition />
       <Faq />
       <Footer />
     </div>
