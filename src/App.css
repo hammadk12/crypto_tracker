@@ -38,3 +38,13 @@
     transform: rotate(360deg);
   }
 }
+
+.arrow-icon {
+  fill: black;
+}
+
+@media (min-width: 900px) { /* Tailwind's 'lg' breakpoint */
+  .arrow-icon {
+    fill: white; /* Color for large screens */
+  }
+}

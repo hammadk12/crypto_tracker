@@ -70,15 +70,15 @@ const Testimonial = () => {
     };
 
     return (
-        <div className="relative flex flex-col items-center justify-center mb-[180px]">
-            <div className="w-full max-w-4xl text-center px-12 md:px-14">
+        <div className="relative flex flex-col items-center justify-center mb-[180px] mx-4">
+            <div className="w-full max-w-3xl lg:max-w-5xl text-center p-10 bg-[#FAF0E6] rounded-xl shadow-xl">
                 {/* Testimonial content */}
-                <div className="mx-auto max-h-[250px] min-h-[250px] flex flex-col justify-between">
-                    <p className="text-xl font-light italic mt-12 mb-3">{testimonials[activeIndex].quote}</p>
-                    <p className="font-bold mt-6">{testimonials[activeIndex].author}</p>
-                    <p className="text-sm mb-6">{testimonials[activeIndex].position}</p>
+                <div className="mx-auto max-h-[300px] min-h-[250px] flex flex-col justify-between">
+                    <p className="text-black text-lg md:text-xl font-light italic mt-4 mb-3">{testimonials[activeIndex].quote}</p>
+                    <p className="text-black font-bold mt-4">{testimonials[activeIndex].author}</p>
+                    <p className="text-black text-sm mt-2 mb-6">{testimonials[activeIndex].position}</p>
                     {/* Navigation dots */}
-                    <div className="flex justify-center mt-4">
+                    <div className="flex justify-center">
                         {testimonials.map((_, index) => (
                             <button
                                 key={index}
@@ -94,22 +94,20 @@ const Testimonial = () => {
             <button
                 onClick={goToPrev}
                 aria-label="Previous testimonial"
-                className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 sm:p-4 lg:p-20"
+                className="absolute left-0 lg:left-20 top-1/2 transform -translate-y-1/2 p-2"
             >
-                <AiOutlineArrowLeft />
+                <span><AiOutlineArrowLeft size={24} className='arrow-icon md:ml-4'/></span>
             </button>
             {/* Right navigation arrow */}
             <button
                 onClick={goToNext}
                 aria-label="Next testimonial"
-                className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 lg:p-20"
+                className="absolute right-0 lg:right-20 top-1/2 transform -translate-y-1/2 p-2"
             >
-                <AiOutlineArrowRight />
+                <span><AiOutlineArrowRight size={24} className='arrow-icon md:mr-4'/></span>
             </button>
         </div>
-
-
     );
-};
-
+    
+}
 export default Testimonial
