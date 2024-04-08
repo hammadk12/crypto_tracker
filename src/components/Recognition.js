@@ -24,27 +24,27 @@ const importAll = (r) => {
 
   const Recognition = () => {
     return (
-        <section className="py-8">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <section className="py-8 mb-[250px]">
+        <div className="container mx-auto px-4 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-2 md:gap-2 items-center">
             {/* Left side with text */}
             <div>
-              <h2 className="text-3xl font-bold mb-4">Recognitions and Awards</h2>
-              <p className="mb-6">Our app has been recognized for its outstanding performance and features.</p>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 mt-[200px]">Recognitions and Awards</h2>
+              <p className="mb-6">Our application has been recognized for its outstanding performance and features.</p>
               <div className="flex space-x-2 mb-6">
-                <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300">
+                <button className="text-white bg-indigo-600 hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-opacity-50 rounded-lg px-5 py-2.5 transition ease-in duration-150">
                   Learn More
                 </button>
-                <button className="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 transition duration-300">
-                  Download Now
+                <button className="bg-gray-800 text-white px-5 py-2.5 rounded hover:bg-black transition ease-in duration-150">
+                  Track Now
                 </button>
               </div>
             </div>
 
         {/* Right side with logos */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="sm:mt-10 md:mt-[10px] lg:mt-[200px] grid grid-cols-2 md:grid-cols-4 lg:grid-cols-2 gap-2">
             {logos.map((logo, index) => (
-              <div key={index} className="bg-gray-100 p-4 rounded shadow-lg transform transition duration-300 hover:scale-105">
+              <div key={index} className="bg-gray-100 p-4 rounded shadow-lg transform transition duration-300 hover:scale-105 ">
                <img src={images[logo.path]} alt={logo.name} className="h-12 mx-auto" />
               </div>
           ))}
