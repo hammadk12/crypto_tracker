@@ -43,8 +43,21 @@
   fill: black;
 }
 
-@media (min-width: 900px) { /* Tailwind's 'lg' breakpoint */
+@media (min-width: 1400px) { /* Tailwind's 'lg' breakpoint */
   .arrow-icon {
     fill: white; /* Color for large screens */
   }
 }
+
+@media (min-width: 1024px) { /* Tailwind's default lg breakpoint */
+  .icon-color-lg {
+    fill: #FAF0E6;
+  }
+}
+
+@media (max-width: 767px) { /* Tailwind's 'md' breakpoint is 768px */
+  .mb-sm-16 {
+    margin-bottom: 4rem; /* 16 in Tailwind's spacing scale equals 4rem */
+  }
+}
+
