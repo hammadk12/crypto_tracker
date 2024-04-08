@@ -41,7 +41,7 @@ const Faq = () => {
 
 
   return (
-    <div className="container mx-auto px-12 py-12">
+    <div id="faq" className="container mx-auto px-12 py-12">
       <div className="md:flex md:items-start md:justify-between">
         {/* Left Column for Header and CTA */}
         <div className="mb-10 md:mb-0 md:w-1/2">

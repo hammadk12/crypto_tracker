@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link, useNavigate } from 'react-router-dom';
 import { ReactComponent as YoutubeIcon} from '../assets/youtube.svg';
 import { ReactComponent as TwitterIcon} from '../assets/twitter-alt.svg';
 import { ReactComponent as LinkedinIcon} from '../assets/linkedin.svg'
@@ -7,19 +8,38 @@ import { ReactComponent as InstagramIcon} from '../assets/instagram.svg'
 
 
 const Footer = () => {
-
+  const navigate = useNavigate();
   const iconColor = '#FAF0E6'
 
+  const handleFaqClick = (e) => {
+    if (window.location.pathname === '/') {
+      e.preventDefault();
+      const faqElement = document.getElementById('faq');
+      if (faqElement) {
+        faqElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // This will handle navigation for non-homepage routes
+      navigate('/#faq');
+    }
+  };
+  
   return (
     <footer>
     <div className="container mx-auto px-4 lg:px-12 py-8 mt-[200px]">
       <div className="flex flex-col md:flex-row lg:flex-row justify-between items-center">
       <h2 className='text-3xl font-bold mb-sm-16'>CTrack</h2>
-        <div className="flex flex-col md:flex-row lg:flex-row justify-center lg:justify-center flex-wrap gap-4 lg:pl-[130px] text-center text-lg">
+        <div className="flex flex-col md:flex-row lg:flex-row justify-center lg:justify-center flex-wrap gap-4 lg:pl-[80px] text-center text-lg">
           <a href="/about" className="hover:text-gray-400">About Us</a>
           <a href="/contact" className="hover:text-gray-400">Contact Us</a>
-          <a href="/faqs" className="hover:text-gray-400">FAQs</a>
-          <a href="/support" className="hover:text-gray-400">Support</a>
+          <Link
+            to="/#faq"
+            className="hover:text-gray-400"
+            onClick={handleFaqClick}
+          >
+            FAQs
+          </Link>
+
           <a href="/terms" className="hover:text-gray-400 mb-sm-16">Terms</a>
         </div>
 
@@ -53,7 +73,7 @@ const Footer = () => {
       </div>
       </div>
   </footer>
-);
+  );
 };
 
 
