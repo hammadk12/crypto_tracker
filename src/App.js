@@ -1,7 +1,7 @@
 // The root AKA main container for app content
 // Main layout
 import './App.css';
-import Footer from '../src/components/Footer'
+import Footer from './components/Footer'
 import Navbar from './components/Navbar';
 import Features from './components/Features';
 import Faq from './components/Faq';
