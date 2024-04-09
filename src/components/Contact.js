@@ -6,7 +6,7 @@ const Contact = () => {
 // Form endpoint
 const formSpreeUrl = 'https://formspree.io/f/xrgnoqgb'
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div id="contact" className="container mx-auto px-4 py-8">
       <h1 className="text-3xl md:text-4xl lg:text-7xl font-bold text-center mb-10">Contact Us</h1>
 
       <div className="max-w-md mx-auto">

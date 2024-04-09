@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 
 const Terms = () => {
@@ -62,8 +63,8 @@ const currentDate = new Date().toLocaleDateString("en-US", {
          <section>
             <h2 className="text-2xl font-semibold mt-4 mb-2 override-text-color">6. Return Policy</h2>
             <p className="mb-4 override-text-color">
-                If you have any questions feel free to 
-                <span className='text-blue-600 hover:underline cursor-pointer'> Contact</span> us.
+                If you have any questions feel free to  
+                <span className='text-blue-600 hover:underline cursor-pointer'> <Link to="/contact">Contact</Link></span> us.
             </p>
          </section>
         </div>

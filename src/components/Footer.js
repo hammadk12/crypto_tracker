@@ -28,7 +28,7 @@ const Footer = () => {
     <footer>
     <div className="container mx-auto px-4 lg:px-12 py-8 mt-[200px]">
       <div className="flex flex-col md:flex-row lg:flex-row justify-between items-center">
-      <h2 className='text-3xl font-bold mb-sm-16'>CTrack</h2>
+      <h2 className='text-3xl font-bold mb-sm-16'><Link to="/">CTrack</Link></h2>
         <div className="flex flex-col md:flex-row lg:flex-row justify-center lg:justify-center flex-wrap gap-4 lg:pl-[80px] text-center text-lg">
           <a href="/about" className="hover:text-gray-400">About Us</a>
           <a href="/contact" className="hover:text-gray-400">Contact Us</a>

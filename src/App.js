@@ -7,10 +7,12 @@ import Navbar from './components/Navbar';
 import Contact from './components/Contact';
 import HomePage from './components/HomePage';
 import Terms from './components/Terms';
+import Scroll from './components/Scroll';
 
 function App() {
   return (
     <Router>
+      <Scroll /> 
       <div>
         <Navbar />
         <Routes>
