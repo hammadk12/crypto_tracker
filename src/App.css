@@ -39,6 +39,10 @@
   }
 }
 
+.override-text-color {
+  color: #000000 !important; /* black color */
+}
+
 .arrow-icon {
   fill: black;
 }
