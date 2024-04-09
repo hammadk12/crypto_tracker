@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Contact = () => {
 
@@ -6,8 +7,7 @@ const Contact = () => {
 const formSpreeUrl = 'https://formspree.io/f/xrgnoqgb'
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-center mb-4">Get in touch</h1>
-      <p className="text-center mb-6">We're here to help. Contact us for any support or inquiries.</p>
+      <h1 className="text-3xl md:text-4xl lg:text-7xl font-bold text-center mb-10">Contact Us</h1>
 
       <div className="max-w-md mx-auto">
         <h2 className="text-xl font-semibold mb-4">Contact Support</h2>
@@ -25,7 +25,7 @@ const formSpreeUrl = 'https://formspree.io/f/xrgnoqgb'
 
           <div className="flex items-center">
             <input type="checkbox" id="terms" name="terms" className="mr-2" />
-            <label htmlFor="terms" className="text-sm">I agree to the Terms</label>
+            <label htmlFor="terms" className="text-sm">I agree to the <Link className="hover:underline" to="/terms">Terms</Link></label>
           </div>
 
           <button type="submit" className="py-2 px-4 bg-black text-white rounded hover:bg-gray-700">

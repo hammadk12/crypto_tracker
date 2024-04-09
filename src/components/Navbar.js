@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 
 const Navbar = () => {
@@ -49,7 +50,7 @@ const Navbar = () => {
                     />
                 </form>
                 <li className='hover:text-blue-400 cursor-pointer'>View</li>
-                <li className='hover:text-blue-400 cursor-pointer'>Contact</li>
+                <Link to="/contact" className='hover:text-blue-400 cursor-pointer'>Contact</Link>
             </ul>
 
         {/* Mobile Button */}
