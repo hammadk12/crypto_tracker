@@ -43,6 +43,10 @@
   color: #000000 !important; /* black color */
 }
 
+.override-text-color-2 {
+  color: rgb(79 70 229) !important; /* black color */
+}
+
 .arrow-icon {
   fill: black;
 }
