@@ -5,8 +5,8 @@ const Features = () => {
     <div className="py-12 sm:px-2 md:px-12 lg:px-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
            <div className='text-center'>
-            <h2 className="mt-2 text-center text-3xl md:text-4xl lg:text-5xl leading-8 font-extrabold tracking-tight px-4">Efficiently track your cryptocurrency investments with our application.</h2>
-            <p className="hidden md:block lg:block mt-10 text-center max-w-2xl text-xl lg:mx-auto px-8">
+            <h2 className="mt-2 lg:mt-28 text-3xl md:text-4xl lg:text-5xl leading-8 font-extrabold tracking-tight px-4">Efficiently track your cryptocurrency investments with our application.</h2>
+            <p className="hidden md:block lg:block mt-10 max-w-2xl text-xl lg:mx-auto px-8">
                 Our application provides users with the ability to easily search and filter their cryptocurrency data, allowing for efficient tracking of their investments.
             </p>
         </div>

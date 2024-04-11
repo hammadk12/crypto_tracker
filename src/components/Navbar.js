@@ -67,7 +67,7 @@ const Navbar = () => {
         <ul>
             <li className='p-4 text-4xl hover:scale-125 hover:shadow-lg transition-transform duration-300 ease-in-out'>Search</li>
             <li className='p-4 text-4xl hover:scale-125 hover:shadow-lg transition-transform duration-300 ease-in-out'>View</li>
-            <li className='p-4 text-4xl hover:scale-125 hover:shadow-lg transition-transform duration-300 ease-in-out'>Contact</li>
+            <li className='p-4 text-4xl hover:scale-125 hover:shadow-lg transition-transform duration-300 ease-in-out'><Link to='/contact'>Contact</Link></li>
         </ul>
         </div>
         </div>

@@ -10,6 +10,7 @@ import HomePage from './components/HomePage';
 import Terms from './components/Terms';
 import Scroll from './components/Scroll';
 import About from './components/About';
+import View from './components/View';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path='/contact' element={<Contact/>}/>
           <Route path='/terms' element={<Terms />}/>
           <Route path='/about' element={<About />}/>
+          <Route path='/view' element={<View />}/>
         </Routes>
 
         <Footer />

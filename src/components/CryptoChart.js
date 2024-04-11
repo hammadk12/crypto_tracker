@@ -2,7 +2,7 @@ import { Line } from 'react-chartjs-2';
 
 const CryptoChart = ({ data }) => {
   const chartData = {
-    labels: data.map(d => d.time), // assuming 'time' and 'value' fields in your data
+    labels: data.map(d => d.time), 
     datasets: [{
       label: 'Price',
       data: data.map(d => d.value),

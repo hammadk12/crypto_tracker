@@ -19,7 +19,7 @@ const ApiData = () => {
         setCoins(response.data);
       } catch (error) {
         console.error("Error fetching data: ", error);
-        // Trigger toast notification here for error
+        toast.error("An error occurred while fetching data.");
       }
     };
 
