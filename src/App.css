@@ -71,6 +71,8 @@
   }
 }
 
+/* About component styling */
+
 .about-container {
   max-width: 100%; 
   margin-right: auto;
@@ -82,6 +84,38 @@
   border-radius: 0;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Adjust based on your shadow-xl value */
 }
+
+.about-heading {
+  font-size: 1.875rem; 
+  font-weight: 600; 
+  margin-top: 2.5rem; 
+}
+
+@media (min-width: 768px) { /* md bp */
+  .about-heading {
+    font-size: 2.25rem; 
+  }
+}
+
+@media (min-width: 1024px) { /* lg bp */
+  .about-heading {
+    font-size: 3rem; 
+    margin-top: 0; 
+  }
+}
+
+.about-paragraph {
+  margin-top: 1.25rem;
+  margin-bottom: 3.5rem;
+  font-size: 1.25rem;
+}
+
+@media (min-width: 1024px) { /* 'lg' breakpoint */
+  .about-paragraph {
+    font-size: 1.5rem; 
+  }
+}
+
 
 @media (min-width: 768px) { /* Adjust based on Tailwind's 'md' breakpoint */
   .about-container {
