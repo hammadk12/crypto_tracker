@@ -29,10 +29,23 @@ const Navbar = () => {
         };
 
         window.addEventListener('resize', handleResize);
+
+        if (nav) {
+            document.body.classList.add('no-scroll');
+        } else {
+            document.body.classList.remove('no-scroll');
+        }
         
         // Clean up
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
+        return () => {
+            document.body.classList.remove('no-scroll');
+            window.removeEventListener('resize', handleResize);
+        };
+    }, [nav]);
+
+    const closeMenu = () => {
+        setNav(false);
+    }
 
   return (
     <div>
@@ -67,7 +80,7 @@ const Navbar = () => {
         <ul>
             <li className='p-4 text-4xl hover:scale-125 hover:shadow-lg transition-transform duration-300 ease-in-out'>Search</li>
             <li className='p-4 text-4xl hover:scale-125 hover:shadow-lg transition-transform duration-300 ease-in-out'>View</li>
-            <li className='p-4 text-4xl hover:scale-125 hover:shadow-lg transition-transform duration-300 ease-in-out'><Link to='/contact'>Contact</Link></li>
+            <li className='p-4 text-4xl hover:scale-125 hover:shadow-lg transition-transform duration-300 ease-in-out' onClick={closeMenu}><Link to='/contact'>Contact</Link></li>
         </ul>
         </div>
         </div>

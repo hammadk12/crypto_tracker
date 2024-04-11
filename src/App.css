@@ -129,3 +129,8 @@
     border-radius: 0.75rem;
   }
 }
+
+/* Mobile Menu No Scroll */
+.no-scroll {
+  overflow: hidden !important;
+}
