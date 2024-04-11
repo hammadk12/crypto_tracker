@@ -39,6 +39,7 @@
   }
 }
 
+/* Text Color Style */
 .override-text-color {
   color: #000000 !important; /* black color */
 }
@@ -51,6 +52,7 @@
   fill: black;
 }
 
+/* Icon color change */
 @media (min-width: 1400px) { /* Tailwind's 'lg' breakpoint */
   .arrow-icon {
     fill: white; /* Color for large screens */
@@ -69,3 +71,27 @@
   }
 }
 
+.about-container {
+  max-width: 100%; 
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  border-radius: 0;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Adjust based on your shadow-xl value */
+}
+
+@media (min-width: 768px) { /* Adjust based on Tailwind's 'md' breakpoint */
+  .about-container {
+    border-radius: 0.75rem;
+    margin-bottom: 10rem;
+  }
+}
+
+@media (min-width: 1024px) { /* Adjust based on Tailwind's 'lg' breakpoint */
+  .about-container {
+    border-radius: 0.75rem;
+  }
+}

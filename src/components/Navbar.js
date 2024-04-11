@@ -36,7 +36,7 @@ const Navbar = () => {
 
   return (
     <div>
-        <div className='flex justify-between items-center pt-10 pb-32 px-16'>
+        <div className='flex justify-between items-center pt-10 pb-10 md:pb-32 px-16'>
             <h1 className='font-bold text-xl cursor-pointer'><Link to="/">CTrack</Link></h1>
             <ul className='gap-8 text-xl sm:text-lg hidden sm:flex'>
                 <form onSubmit={handleSubmit}>
