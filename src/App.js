@@ -1,6 +1,7 @@
 // The root AKA main container for app content
 // Main layout
 import './App.css';
+import { ToastContainer } from 'react-toastify';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar';
@@ -15,6 +16,7 @@ function App() {
     <Router>
       <Scroll /> 
       <div>
+        <ToastContainer />
         <Navbar />
         <Routes>
           <Route path='/' element={<HomePage />} />
