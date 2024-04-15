@@ -62,7 +62,7 @@ const Navbar = () => {
                         style={{ backgroundColor: '#FAF0E6'}}
                     />
                 </form>
-                <li className='hover:text-blue-400 cursor-pointer'>View</li>
+                <Link to='/view' className='hover:text-blue-400 cursor-pointer'>View</Link>
                 <Link to="/contact" className='hover:text-blue-400 cursor-pointer'>Contact</Link>
             </ul>
 
