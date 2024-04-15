@@ -35,7 +35,7 @@ const About = () => {
         <img 
             src={photo8}
             alt='Tech Meeting'
-            className='object-contain max-w-full md:max-w-2xl lg:max-w-6xl h-auto mx-auto lg:hidden'
+            className='object-contain max-w-full md:max-w-lg lg:max-w-6xl h-auto m-auto lg:hidden'
           />
       </section>
     </section>
@@ -56,7 +56,7 @@ const About = () => {
       </div>
   
     {/* Fifth About Section*/}
-    <div className='container mx-auto px-10 py-32 bg-[#FAF0E6] md:rounded-xl lg:rounded-xl shadow-xl'>
+    <div className='about-container bg-[#FAF0E6]'>
           <h2 className='about-heading override-text-color'>Explore Our Gallery.</h2>
           <p className='about-paragraph override-text-color'>We continue to improve and deliver the best quality for our customers.</p>
           
@@ -71,3 +71,5 @@ const About = () => {
 }
 
 export default About; 
+
+// container mx-auto px-10 py-32 bg-[#FAF0E6] md:rounded-xl lg:rounded-xl shadow-xl
