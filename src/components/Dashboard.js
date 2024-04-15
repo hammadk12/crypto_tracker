@@ -8,7 +8,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await ApiData();
+      const data = await fetchCoins();
       setCryptoData(data);
     };
     fetchData();
@@ -16,9 +16,9 @@ const Dashboard = () => {
 
   return (
     <div>
-      <h1>
-        
-      </h1>
+      <h2 className='text-center text-4xl md:text-5xl lg:text-7xl'>Dashboard</h2>
+      <CryptoTable data={cryptoData} />
+      <CryptoChart data={cryptoData} />
     </div>
   )
 }

@@ -1,43 +1,11 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios';
-import { toast } from 'react-toastify';
-
-// Separated fetch logic can be reused
-const fetchCoins = async (setCoins, setError, setLoading) => {
-  setLoading(true);
-  try {
-    const response = await axios.get('https://api.coingecko.com/api/v3/coins/markets', {
-      params: {
-        vs_currency: 'usd',
-        order: 'market_cap_desc',
-        per_page: 10,
-        page: 1
-      }
-    });
-    setCoins(response.data);
-    setError(null);  // clear any prior errors on successful fetch
-  } catch (error) {
-    console.error("Error fetching data: ", error);
-    setError("An error occurred while fetching data.");
-    toast.error("Failed to fetch data: " + error.message);
-  }
-  setLoading(false);
-};
+import React from 'react'
+import useFetchCoins from '../hooks/useFetchCoins';
 
 const ApiData = () => {
-  const [coins, setCoins] = useState([]);
-  const [isLoading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const { coins, isLoading, error } = useFetchCoins();
 
-  useEffect(() => {
-    fetchCoins(setCoins, setError, setLoading);
-    const interval = setInterval(() => fetchCoins(setCoins, setError, setLoading), 60000); // Update every minute
-
-    return () => clearInterval(interval); // Cleanup interval on component unmount
-  }, []);
-
-  if (isLoading) return <p>Loading...</p>;
-  if (error) return <p>{error}</p>;
+  if (isLoading) return <p>Loading...</p>
+  if (error) return <p>{error}</p>
 
   return (
     <div>
