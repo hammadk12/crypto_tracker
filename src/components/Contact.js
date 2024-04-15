@@ -1,10 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const Contact = () => {
 
 // Form endpoint
 const formSpreeUrl = 'https://formspree.io/f/xrgnoqgb'
+
+const handleError = (e) => {
+  e.preventDefault();
+  toast.error('Failed to submit form. Please try again later.')
+}
+
   return (
     <div id="contact" className="container mx-auto px-4 py-8">
       <h1 className="text-3xl md:text-4xl lg:text-7xl font-bold text-center mb-10">Contact Us</h1>
@@ -13,7 +20,7 @@ const formSpreeUrl = 'https://formspree.io/f/xrgnoqgb'
         <h2 className="text-xl font-semibold mb-4">Contact Support</h2>
         <p className="mb-4">Have a question or need assistance? Fill out the form below.</p>
 
-        <form action={formSpreeUrl} method="POST" className="flex flex-col space-y-4">
+        <form action={formSpreeUrl} method="POST" onError={handleError} className="flex flex-col space-y-4 override-text-color">
           <label htmlFor="name" className="font-medium">Name</label>
           <input type="text" id="name" name="name" required className="p-2 border border-gray-300 rounded" />
 
@@ -21,7 +28,7 @@ const formSpreeUrl = 'https://formspree.io/f/xrgnoqgb'
           <input type="email" id="email" name="_replyto" required className="p-2 border border-gray-300 rounded" />
 
           <label htmlFor="message" className="font-medium">Message</label>
-          <textarea id="message" name="message" required className="p-2 border border-gray-300 rounded" rows="4"></textarea>
+          <textarea id="message" name="message" required className="p-2 border border-gray-300 rounded resize-none" rows="4"></textarea>
 
           <div className="flex items-center">
             <input type="checkbox" id="terms" name="terms" className="mr-2" />
