@@ -1,11 +1,6 @@
 import React from 'react'
-import useFetchCoins from '../hooks/useFetchCoins';
 
-const ApiData = () => {
-  const { coins, isLoading, error } = useFetchCoins();
-
-  if (isLoading) return <p>Loading...</p>
-  if (error) return <p>{error}</p>
+const ApiData = ({ coins }) => {
 
   return (
     <div>

@@ -30,7 +30,7 @@ const useFetchCoins = () => {
     };
 
     fetchData();
-    const interval = setInterval(fetchData, 60000); // Update every minute
+    const interval = setInterval(fetchData, 264000); // Update every 4.4 minutes
     return () => clearInterval(interval);
   }, []);
 
