@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
+import FiveStars from './FiveStars';
 
 const Testimonial = () => {
     // state to track active testimonial index
@@ -75,7 +76,10 @@ const Testimonial = () => {
                 {/* Testimonial content */}
                 <div className="mx-auto max-h-[300px] min-h-[250px] flex flex-col justify-between">
                     <p className="text-black text-lg md:text-xl font-light italic mt-4 mb-3">{testimonials[activeIndex].quote}</p>
+                    <div className="flex items-center justify-center gap-2 mt-4">
                     <p className="text-black font-bold mt-4">{testimonials[activeIndex].author}</p>
+                    <FiveStars />
+                    </div>
                     <p className="text-black text-sm mt-2 mb-6">{testimonials[activeIndex].position}</p>
                     {/* Navigation dots */}
                     <div className="flex justify-center">

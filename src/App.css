@@ -138,4 +138,6 @@
 /* Star icon color */
 .star-icon {
   fill: gold;
+  stroke: black;
+  stroke-width: 20px;
 }
