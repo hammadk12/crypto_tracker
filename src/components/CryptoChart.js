@@ -1,5 +1,15 @@
 import { Line } from 'react-chartjs-2';
 
+const options = {
+  scales: {
+    yAxes: [{
+      ticks: {
+        beginAtZero: true
+      }
+    }]
+  }
+}
+
 const CryptoChart = ({ data }) => {
   const chartData = {
     labels: data.map(d => d.time), 
@@ -12,7 +22,7 @@ const CryptoChart = ({ data }) => {
     }],
   };
 
-  return <Line data={chartData} />;
+  return <Line data={chartData} options={options}/>;
 };
 
 export default CryptoChart

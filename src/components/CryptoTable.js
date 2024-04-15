@@ -12,7 +12,14 @@ const CryptoTable = ({ data }) => {
       </tr>
      </thead>
      <tbody>
-        {data.map(coin)}
+        {data.map(coin => (
+            <tr key={coin.id}>
+                <td>{coin.name}</td>
+                <td>${coin.current_price.toFixed(2)}</td>
+                <td>${coin.market_cap.toLocalString()}</td>
+                <td>{coin.price_change_percentage_24h.toFixed(2)}%</td>
+            </tr>
+        ))}
      </tbody>
     </table>
   )

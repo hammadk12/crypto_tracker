@@ -62,7 +62,7 @@ const Navbar = () => {
                         style={{ backgroundColor: '#FAF0E6'}}
                     />
                 </form>
-                <Link to='/view' className='hover:text-blue-400 cursor-pointer'>View</Link>
+                <Link to='/dashboard' className='hover:text-blue-400 cursor-pointer'>View</Link>
                 <Link to="/contact" className='hover:text-blue-400 cursor-pointer'>Contact</Link>
             </ul>
 
@@ -78,8 +78,8 @@ const Navbar = () => {
             }
         >
         <ul>
-            <li className='p-4 text-4xl hover:scale-125 hover:shadow-lg transition-transform duration-300 ease-in-out'>Search</li>
-            <li className='p-4 text-4xl hover:scale-125 hover:shadow-lg transition-transform duration-300 ease-in-out'>View</li>
+            <li className='p-4 text-4xl hover:scale-125 hover:shadow-lg transition-transform duration-300 ease-in-out' onClick={closeMenu}><Link to='/about'>About</Link></li>
+            <li className='p-4 text-4xl hover:scale-125 hover:shadow-lg transition-transform duration-300 ease-in-out' onClick={closeMenu}><Link to='/dashboard'>View</Link></li>
             <li className='p-4 text-4xl hover:scale-125 hover:shadow-lg transition-transform duration-300 ease-in-out' onClick={closeMenu}><Link to='/contact'>Contact</Link></li>
         </ul>
         </div>
