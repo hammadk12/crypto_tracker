@@ -134,3 +134,8 @@
 .no-scroll {
   overflow: hidden !important;
 }
+
+/* Star icon color */
+.star-icon {
+  fill: gold;
+}
