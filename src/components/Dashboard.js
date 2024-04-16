@@ -18,7 +18,7 @@ if (error) {
 
   return (
     <ErrorBoundary>
-    <div className='px-4 py-5 bg-black'>
+    <div className='flex flex-col rounded-xl m-auto shadow-xl bg-black p-8'>
       <h2 className='text-center text-4xl md:text-5xl lg:text-7xl'>Dashboard</h2>
       <ApiData coins={coins}/>
       <CryptoTable data={coins} />

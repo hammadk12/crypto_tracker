@@ -10,6 +10,8 @@ const useFetchCoins = () => {
   });
 
   useEffect(() => {
+    console.log("Fetching data started")
+
     const fetchData = async () => {
       setData(prevData => ({ ...prevData, isLoading: true }));
       try {
