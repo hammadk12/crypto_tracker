@@ -13,7 +13,7 @@ const useFetchCoins = () => {
     const fetchData = async () => {
       setData(prevData => ({ ...prevData, isLoading: true }));
       try {
-        const response = await axios.get('https://api.coingecko.com/api/v3/coins/markets', {
+        const response = await axios.get('http://localhost:5000/api/coins', {
           params: {
             vs_currency: 'usd',
             order: 'market_cap_desc',
