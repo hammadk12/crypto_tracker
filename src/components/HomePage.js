@@ -1,11 +1,20 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Features from './Features'
 import Testimonial from './Testimonial'
 import Recognition from './Recognition'
 import Faq from './Faq'
 import AvatarDemo from './AvatarDemo'
 
+
 const HomePage = ({ isMenuOpen }) => {
+  const nextSectionRef = useRef(null);
+
+  const scrollToNextSection = () => {
+    if (nextSectionRef.current) {
+      nextSectionRef.current.scrollIntoView({ behavior: 'smooth'});
+    }
+  }
+
   return (
     <div>
         <header className='flex flex-col justify-center items-center mb-[290px] mt-12 bg-[#FAF0E6] rounded-xl mx-14 lg:mx-[200px] p-8'>
@@ -15,13 +24,15 @@ const HomePage = ({ isMenuOpen }) => {
           { !isMenuOpen && <AvatarDemo/>}
           <p className='text-lg override-text-color text-center'>"CTrack has <span className='text-indigo-600 font-bold'>revolutionized</span> the way I monitor my crypto investments."</p>
         </div>
-        <button className='bg-gray-800 text-white px-5 md:px-8 py-2.5 md:py-5 rounded-lg hover:bg-black transition ease-in duration-150 mb-14'>Explore</button>
+        <button className='bg-gray-800 text-white px-5 md:px-8 py-2.5 md:py-5 rounded-lg hover:bg-black transition ease-in duration-150 mb-14' onClick={scrollToNextSection}>Explore</button>
         </header>
+        <div ref={nextSectionRef}>
         <Features />
         <Testimonial />
         <Recognition />
         <Faq />
     </div>
+   </div>
   )
 }
 

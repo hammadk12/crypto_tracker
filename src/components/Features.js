@@ -30,7 +30,7 @@ const Features = () => {
           <dd className="mt-2 text-base text-black lg:text-[#FAF0E6]">
             Our mobile app allows users to track their cryptocurrency investments anytime, anywhere, providing convenience and flexibility.
           </dd>
-          <button className="mt-4 bg-indigo-600 text-white py-2 px-4 rounded hover:bg-indigo-700">Search</button>
+          <button className="mt-4 bg-indigo-600 text-white py-2 px-4 rounded hover:bg-indigo-700"><Link to='/dashboard'>Search</Link></button>
         </div>
 
         <div className="bg-[#FAF0E6] p-6 rounded-xl shadow-md lg:bg-transparent lg:p-0 lg:rounded-none lg:shadow-none">
@@ -40,7 +40,7 @@ const Features = () => {
           <dd className="mt-2 text-base text-black lg:text-[#FAF0E6]">
             Our application offers advanced features for portfolio management, ensuring the security and organization of your cryptocurrency investments.
           </dd>
-          <button className="mt-4 bg-indigo-600 text-white py-2 px-4 rounded hover:bg-indigo-700">Contact</button>
+          <button className="mt-4 bg-indigo-600 text-white py-2 px-4 rounded hover:bg-indigo-700"><Link to='/contact'>Contact</Link></button>
         </div>
       </dl>
     </div>
