@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
+import { Link } from 'react-router-dom';
 
 const Faq = () => {
 
@@ -50,7 +51,7 @@ const Faq = () => {
             Find answers to common questions about our cryptocurrency tracking application.
           </p>
           <button className="text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-opacity-50 rounded-lg px-5 py-2.5 transition ease-in duration-150">
-            Contact
+            <Link to='/contact'>Contact</Link>
           </button>
         </div>
         {/* FAQ Items */}

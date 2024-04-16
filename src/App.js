@@ -3,6 +3,7 @@
 import './App.css';
 import { ToastContainer } from 'react-toastify';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import ErrorBoundary from './components/ErrorBoundary';
 import Footer from './components/Footer'
 import Navbar from './components/Navbar';
 import Contact from './components/Contact';
@@ -22,6 +23,7 @@ function App() {
       <div>
         <ToastContainer />
         <Navbar isMenuOpen={isMenuOpen} setMenuOpen={setMenuOpen}/>
+        <ErrorBoundary>
         <Routes>
           <Route path='/' element={<HomePage isMenuOpen={isMenuOpen}/>} />
           <Route path='/contact' element={<Contact/>}/>
@@ -29,7 +31,7 @@ function App() {
           <Route path='/about' element={<About />}/>
           <Route path='/dashboard' element={<Dashboard />}/>
         </Routes>
-
+        </ErrorBoundary>
         <Footer />
       </div>
     </Router>

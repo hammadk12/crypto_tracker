@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 // Dynamically import all .svg files from src/assets
 const importAll = (r) => {
@@ -33,10 +34,10 @@ const importAll = (r) => {
               <p className="mb-6">Our application has been recognized for its outstanding performance and features.</p>
               <div className="flex space-x-2 mb-6">
                 <button className="text-white bg-indigo-600 hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-opacity-50 rounded-lg px-5 py-2.5 transition ease-in duration-150">
-                  Learn More
+                  <Link to='/about'>Learn More</Link>
                 </button>
                 <button className="bg-gray-800 text-white px-5 py-2.5 rounded hover:bg-black transition ease-in duration-150">
-                  Track Now
+                  <Link to='/dashboard'>Track Now</Link>
                 </button>
               </div>
             </div>

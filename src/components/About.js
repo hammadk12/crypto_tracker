@@ -71,5 +71,3 @@ const About = () => {
 }
 
 export default About; 
-
-// container mx-auto px-10 py-32 bg-[#FAF0E6] md:rounded-xl lg:rounded-xl shadow-xl
