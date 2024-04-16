@@ -1,13 +1,26 @@
 import React, { useRef } from 'react'
+import { useLocation } from 'react-router-dom'
 import Features from './Features'
 import Testimonial from './Testimonial'
 import Recognition from './Recognition'
 import Faq from './Faq'
 import AvatarDemo from './AvatarDemo'
+import { useEffect } from 'react'
 
 
 const HomePage = ({ isMenuOpen }) => {
   const nextSectionRef = useRef(null);
+  const location = useLocation(); 
+
+  useEffect(() => {
+    // Check if the navigation included a state requesting to scroll to FAQ
+    if (location.state?.scrollToFAQ) {
+      const faqElement = document.getElementById('faq');
+      if (faqElement) {
+        faqElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]); 
 
   const scrollToNextSection = () => {
     if (nextSectionRef.current) {

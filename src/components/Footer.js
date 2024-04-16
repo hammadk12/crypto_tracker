@@ -12,17 +12,9 @@ const Footer = () => {
   const iconColor = '#FAF0E6'
 
   const handleFaqClick = (e) => {
-    if (window.location.pathname === '/') {
-      e.preventDefault();
-      const faqElement = document.getElementById('faq');
-      if (faqElement) {
-        faqElement.scrollIntoView({ behavior: 'smooth' });
-      }
-    } else {
-      // This will handle navigation for non-homepage routes
-      navigate('/#faq');
-    }
-  };
+    e.preventDefault(); // Prevent default link behavior
+  navigate('/', { state: { scrollToFAQ: true } });
+};
   
   return (
     <footer>
@@ -67,7 +59,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row lg:flex-row justify-center space-y-4 md:space-y-0 lg:space-y-0 space-x-4 mt-4">
           <p className="text-sm">&copy; 2024 CTrack. All rights reserved.</p>
           <a href="/privacy" className="text-sm hover:text-gray-400">Privacy Policy</a>
-          <a href="/terms" className="text-sm hover:text-gray-400">Terms of Service</a>
+          <Link href="/terms" className="text-sm hover:text-gray-400">Terms & Conditions</Link>
           <a href="/cookies" className="text-sm hover:text-gray-400">Cookies Policy</a>
         </div>
       </div>
