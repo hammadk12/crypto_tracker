@@ -2,13 +2,12 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 
-const Navbar = () => {
-    const [nav, setNav] = useState(false) // State for mobile menu
+const Navbar = ({ isMenuOpen, setMenuOpen }) => {
     const MOBILE_BREAKPOINT = 768; // mobile breakpoint
     const [search, setSearch] = useState(''); // state for search input
     
     const handleNav = () => {
-        setNav(!nav)
+        setMenuOpen(!isMenuOpen)
     };
 
     const handleSubmit = (e) => {
@@ -24,13 +23,13 @@ const Navbar = () => {
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth >= MOBILE_BREAKPOINT) {
-                setNav(false); // Close mobile menu when over breakpoint
+                setMenuOpen(false); // Close mobile menu when over breakpoint
             }
         };
 
         window.addEventListener('resize', handleResize);
 
-        if (nav) {
+        if (isMenuOpen) {
             document.body.classList.add('no-scroll');
         } else {
             document.body.classList.remove('no-scroll');
@@ -41,11 +40,8 @@ const Navbar = () => {
             document.body.classList.remove('no-scroll');
             window.removeEventListener('resize', handleResize);
         };
-    }, [nav]);
+    }, [isMenuOpen, setMenuOpen]);
 
-    const closeMenu = () => {
-        setNav(false);
-    }
 
   return (
     <div>
@@ -68,19 +64,14 @@ const Navbar = () => {
 
         {/* Mobile Button */}
         <div onClick={handleNav} className='block sm:hidden z-10 cursor-pointer'>
-          {nav ? <AiOutlineClose size={20} style={{color: 'white'}}/> : <AiOutlineMenu size={20} />}
+          {isMenuOpen ? <AiOutlineClose size={20} style={{color: 'white'}}/> : <AiOutlineMenu size={20} />}
         </div>
         {/* Mobile Menu */}
-        <div className={
-            nav 
-              ? 'sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full bg-black h-screen text-center ease-in duration-300 text-white'
-              : 'sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300 '
-            }
-        >
-        <ul>
-            <li className='p-4 text-4xl hover:scale-125 hover:shadow-lg transition-transform duration-300 ease-in-out' onClick={closeMenu}><Link to='/about'>About</Link></li>
-            <li className='p-4 text-4xl hover:scale-125 hover:shadow-lg transition-transform duration-300 ease-in-out' onClick={closeMenu}><Link to='/dashboard'>View</Link></li>
-            <li className='p-4 text-4xl hover:scale-125 hover:shadow-lg transition-transform duration-300 ease-in-out' onClick={closeMenu}><Link to='/contact'>Contact</Link></li>
+        <div className={isMenuOpen ? 'sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full bg-black h-screen text-center ease-in duration-300 text-white' : 'sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300 '}>
+          <ul>
+            <li className='p-4 text-4xl hover:scale-125 hover:shadow-lg transition-transform duration-300 ease-in-out' onClick={() => setMenuOpen(false)}><Link to='/about'>About</Link></li>
+            <li className='p-4 text-4xl hover:scale-125 hover:shadow-lg transition-transform duration-300 ease-in-out' onClick={() => setMenuOpen(false)}><Link to='/dashboard'>View</Link></li>
+            <li className='p-4 text-4xl hover:scale-125 hover:shadow-lg transition-transform duration-300 ease-in-out' onClick={() => setMenuOpen(false)}><Link to='/contact'>Contact</Link></li>
         </ul>
         </div>
         </div>

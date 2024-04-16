@@ -11,16 +11,19 @@ import Terms from './components/Terms';
 import Scroll from './components/Scroll';
 import About from './components/About';
 import Dashboard from './components/Dashboard';
+import { useState } from 'react';
 
 function App() {
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
   return (
     <Router>
       <Scroll /> 
       <div>
         <ToastContainer />
-        <Navbar />
+        <Navbar isMenuOpen={isMenuOpen} setMenuOpen={setMenuOpen}/>
         <Routes>
-          <Route path='/' element={<HomePage />} />
+          <Route path='/' element={<HomePage isMenuOpen={isMenuOpen}/>} />
           <Route path='/contact' element={<Contact/>}/>
           <Route path='/terms' element={<Terms />}/>
           <Route path='/about' element={<About />}/>
