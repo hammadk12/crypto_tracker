@@ -5,7 +5,27 @@ import CryptoTable from './CryptoTable';
 import CryptoChart from './CryptoChart';
 import ErrorBoundary from './ErrorBoundary';
 
-const Dashboard = () => {
+const areEqual = (prevProps, nextProps) => {
+  // Check if isLoading has changed
+  if (prevProps.isLoading !== nextProps.isLoading) {
+    return false;
+  }
+
+  // Check if error has changed
+  if (prevProps.error !== nextProps.error) {
+    return false;
+  }
+
+  // Check if coins array has changed
+  if (prevProps.coins !== nextProps.coins) {
+    return false;
+  }
+
+  return true;
+}
+
+const Dashboard = React.memo(() => {
+  console.log('Dashboard mounted');
   const { coins, isLoading, error } = useFetchCoins();
 
  if (isLoading) {
@@ -18,14 +38,14 @@ if (error) {
 
   return (
     <ErrorBoundary>
-    <div className='flex flex-col rounded-xl m-auto shadow-xl bg-black p-8'>
-      <h2 className='text-center text-4xl md:text-5xl lg:text-7xl'>Dashboard</h2>
+    <div className='flex flex-col rounded-xl shadow-xl bg-black p-20 lg:mx-40'>
+      <h2 className='text-center text-4xl md:text-5xl lg:text-7xl mb-14'>Dashboard</h2>
       <ApiData coins={coins}/>
       <CryptoTable data={coins} />
       <CryptoChart data={coins} />
     </div>
     </ErrorBoundary>
   )
-}
+}, areEqual);
 
 export default Dashboard

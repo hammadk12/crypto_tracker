@@ -41,10 +41,10 @@ const options = {
 
 const CryptoChart = ({ data }) => {
   const chartData = {
-    labels: data.map(d => d.time), // Assuming 'time' is the correct key for your label
+    labels: data.map(d => d.time), 
     datasets: [{
       label: 'Price',
-      data: data.map(d => d.value), // Assuming 'value' is the correct key for your data points
+      data: data.map(d => d.value), 
       fill: false,
       backgroundColor: 'rgb(75, 192, 192)',
       borderColor: 'rgba(75, 192, 192, 0.2)',

@@ -141,3 +141,9 @@
   stroke: black;
   stroke-width: 20px;
 }
+
+/* CryptoTable css */
+.crypto-table th,
+.crypto-table td {
+  padding: 0.5rem 1rem; 
+}

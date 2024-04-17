@@ -1,5 +1,6 @@
 // The root AKA main container for app content
 // Main layout
+import React, { useState } from 'react';
 import './App.css';
 import { ToastContainer } from 'react-toastify';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
@@ -12,17 +13,18 @@ import Terms from './components/Terms';
 import Scroll from './components/Scroll';
 import About from './components/About';
 import Dashboard from './components/Dashboard';
-import { useState } from 'react';
 
 function App() {
   const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const MemoizedNavbar = React.memo(() => <Navbar isMenuOpen={isMenuOpen} setMenuOpen={setMenuOpen} />)
 
   return (
     <Router>
       <Scroll /> 
       <div>
         <ToastContainer />
-        <Navbar isMenuOpen={isMenuOpen} setMenuOpen={setMenuOpen}/>
+        <MemoizedNavbar />
         <ErrorBoundary>
         <Routes>
           <Route path='/' element={<HomePage isMenuOpen={isMenuOpen}/>} />
